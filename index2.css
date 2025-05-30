@@ -1,0 +1,257 @@
+body{
+  background-image: url(adim.png);
+  text-align: center;
+}
+ img{
+    border-radius: 5%;
+    border: black solid 2px;
+    margin-right:1200px;
+    padding: auto;
+    width: 10%;
+    height: 10%;
+    display: flex;
+}
+img:hover{
+   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.shoescontainer {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding:20px 0;
+
+
+}
+nav .logo{
+    color:#fff;
+    text-decoration: none;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+nav ul li{
+    display: inline-block;
+    margin:0 6px;
+}
+nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size:18px;
+    font-weight:500;
+}
+nav ul li a:hover{
+    color: #e80202;
+}
+.shoecard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  width: 200px;
+  background: #fafafa;
+}
+.shoecard img {
+  width: 100%;
+  height: auto;
+}
+.price {
+  font-weight: bold;
+  margin: 12px 0;
+}
+button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.shoescontainer {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  width: 200px;
+  background: #fafafa;
+}
+.card img {
+  height: 200px;
+  width: 200px;
+}
+.card h1{
+  font-size: 20px;
+}
+.card h2{
+  font-size: 18px;
+}
+.price {
+  font-weight: bold;
+  margin: 12px 0;
+}
+button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background: #1a1a1a;
+}
+
+.carousel {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    height: 400px;
+    overflow: hidden;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.carouselin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carouselitem {
+    min-width: 100%;
+    position: relative;
+    display: none;
+}
+
+.carouselitem.active {
+    display: block;
+}
+
+.carouselitem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carouselcaption {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    width: 90%;
+    max-width: 600px;
+}
+
+.carouselcaption h3 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 10px;
+}
+
+.carouselcaption p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.carouselcontrol {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    z-index: 10;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carouselcontrol.prev {
+    left: 15px;
+}
+
+.carouselcontrol.next {
+    right: 15px;
+}
+
+.carouselcontrol:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.carouselindicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: white;
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        width: 95%;
+        padding-bottom: 75%;
+    }
+
+    .carouselcaption {
+        bottom: 10%;
+    }
+
+    .carouselcontrol {
+        padding: 8px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carouselcaption h3 {
+        margin-bottom: 5px;
+    }
+
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
+}
